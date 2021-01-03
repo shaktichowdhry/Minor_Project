@@ -10,7 +10,7 @@
 [+] Install Laravel Mix
     - setup js and scss
 [+] Install tailwind css
-[.] Create Home page using Html and Css
+[+] Create Home page using Html and Css
     - includes tailwind css
 [.] Create card page
     - order summary section

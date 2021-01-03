@@ -1,0 +1,51 @@
+<section class="login flex justify-center">
+    <div class="flex justify-center bg-gray-50 py-2 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-md w-full space-y-8">
+            <div>
+                <h2 class="mt-0 text-center text-3xl font-extrabold text-gray-900">
+                    Register Now !
+                </h2>
+            </div>
+            <form class="mt-1 space-y-6  bg-white shadow-md rounded px-8 pt-2 pb-8 mb-4" action="#" method="POST">
+                <input type="hidden" name="remember" value="true">
+                <div class="rounded-md shadow-sm -space-y-px">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name </label>
+                        <input id="name" name="name" type="text" autocomplete="name" required class=" shadow appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                            placeholder="Full Name">
+                    </div>
+                    <div class="mb-6">
+                        <label for="email-address" class="block text-gray-700 text-sm font-bold mb-2">Email </label>
+                        <input id="email-address" name="email" type="email" autocomplete="email" required class=" shadow appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                            placeholder="Email address">
+                    </div>
+                    <div class="mb-4">
+                        <label for="password" class="block text-gray-700 text-sm font-bold mt-4 mb-2">Password</label>
+                        <input id="password" name="password" type="password" autocomplete="current-password" required class=" shadow appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                            placeholder="Password">
+                    </div>
+                </div>
+
+                <div>
+                    <button type="submit" class="btn-primary rounded-full group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                <span class="absolute left-0 inset-y-0 flex items-center pl-3">
+                  <!-- Heroicon name: lock-closed -->
+                  <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+                  </svg>
+                </span>
+                Sign In
+              </button>
+                    <div class="flex justify-center mt-5">
+                        <div class="text-sm">
+                            <a href="/login" class="font-medium">
+              Already have account?
+            </a>
+                        </div>
+            </form>
+            </div>
+            </div>
+            <p class="text-center text-gray-500 text-xs">
+                &copy;2020 Sugarfield. All rights reserved.
+            </p>
+</section>
