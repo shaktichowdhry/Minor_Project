@@ -1,6 +1,46 @@
+// adding partial files
 @import "./variables";
+// 
+// common
 body {
     font-family: "Lato, sans-serif";
     -webkit-font-smoothing: antialiased;
     color: $dark;
+    // height: 4000px;  // for development pupose
+}
+
+// navigation
+nav li:last-child a {
+    background: $primary;
+    &:hover {
+        background: $primary-hover;
+    }
+}
+
+nav li a {
+    transition: $smooth;
+    &:hover {
+        color: $primary;
+    }
+}
+
+// hero section
+section.hero {
+    background: $secondary;
+}
+
+// menu
+.size {
+    background: $secondary;
+}
+
+.add-to-cart {
+    border: 2px solid $primary;
+    color: $primary;
+    transition: $smooth;
+    &:hover {
+        background: $primary;
+        border-color: $pure;
+        color: $pure;
+    }
 }
