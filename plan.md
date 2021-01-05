@@ -28,10 +28,10 @@
     - install notification library npm i noty https://ned.im/noty/#/
 [+] Create login page with route
 [+] Create register page with route
-[.] Build register crud 
+[+] Build register crud 
     - dependencies express-flash express-session dotenv
     - status code article https://www.restapitutorial.com/httpstatuscodes.html
-[.] Build login using passport 
+[+] Build login using passport 
     - install dependencies passport passport-local express-session
 [.] Create order controller and link it in server.js
 [.] Create orders view with table for customers and admin
@@ -43,4 +43,5 @@
 [.] Socket connection
     - dependencies socket.io
 [.] Build project for deployment
+[.] Deploy project on live server
 
