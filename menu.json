@@ -1,0 +1,65 @@
+[{
+    "_id": {
+        "$oid": "5eee651f739f8c674fd736ee"
+    },
+    "name": "Red Velvet Cake",
+    "image": "item1.png",
+    "price": "250",
+    "size": "1 Kg"
+}, {
+    "_id": {
+        "$oid": "5eee6671a27a66807cf2bea3"
+    },
+    "name": "Sponge Cake",
+    "image": "item2.png",
+    "price": "300",
+    "size": "1/2 Kg"
+}, {
+    "_id": {
+        "$oid": "5eee6692a27a66807cf2bea4"
+    },
+    "name": "Chiffon Cake",
+    "image": "item3.png",
+    "price": "200",
+    "size": "1/2 Kg"
+}, {
+    "_id": {
+        "$oid": "5eee66a5a27a66807cf2bea5"
+    },
+    "name": "Devil’s Food Cake",
+    "image": "item4.png",
+    "price": "500",
+    "size": "1 Kg"
+}, {
+    "_id": {
+        "$oid": "5eee66c4a27a66807cf2bea6"
+    },
+    "name": "Banana cake ",
+    "image": "item5.png",
+    "price": "350",
+    "size": "1/2 Kg"
+}, {
+    "_id": {
+        "$oid": "5eee66cfa27a66807cf2bea7"
+    },
+    "name": "Black forest cake",
+    "image": "item6.png",
+    "price": "200",
+    "size": "1 Kg"
+}, {
+    "_id": {
+        "$oid": "5eee66eea27a66807cf2bea8"
+    },
+    "name": "Layered rainbow cake",
+    "image": "item1.png",
+    "price": "600",
+    "size": "1 Kg"
+}, {
+    "_id": {
+        "$oid": "5eee6717a27a66807cf2bea9"
+    },
+    "name": "Triple chocolate cheesecake",
+    "image": "item2.png",
+    "price": "500",
+    "size": "1 Kg"
+}]

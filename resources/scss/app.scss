@@ -1,6 +1,8 @@
 // adding partial files
 @import "./variables";
 // 
+@import "~noty/src/noty.scss";
+@import "~noty/src/themes/mint.scss";
 // common
 body {
     font-family: "Lato, sans-serif";
@@ -51,6 +53,9 @@ section.hero {
         border-color: $pure;
         color: $pure;
     }
+    &:focus {
+        outline: none;
+    }
 }
 
 // cart
@@ -59,6 +64,11 @@ section.cart {
     .amount {
         color: $primary;
     }
+}
+
+.noty_theme__mint {
+    border-radius: 50px !important;
+    padding-left: 8px !important;
 }
 
 // login
