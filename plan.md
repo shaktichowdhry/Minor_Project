@@ -33,11 +33,12 @@
     - status code article https://www.restapitutorial.com/httpstatuscodes.html
 [+] Build login using passport 
     - install dependencies passport passport-local express-session
-[.] Create order controller and link it in server.js
-[.] Create orders view with table for customers and admin
+[+] Create order controller and link it in server.js
+[+] Create orders view with table for customers and admin
+[+] Place order functionallity
+[+] Show all my orders on customer order page
+[+] Show all orders on admin orders page
 [.] Create orders single page with status
-[.] Make order on cart page
-[.] Place order functionallity
 [.] Order tracker
     - dependencies moment
 [.] Socket connection
