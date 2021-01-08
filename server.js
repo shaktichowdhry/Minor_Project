@@ -10,6 +10,7 @@ const session = require('express-session');
 const flash = require('express-flash');
 const MongoDbStore = require('connect-mongo')(session)
 const passport = require('passport')
+const Emitter = require('events')
 
 
 // Database connection - make a snipped
@@ -22,7 +23,9 @@ connection.once('open', () => {
     console.log('Connection failed...');
 })
 
-
+// event emitter
+const eventEmitter = new Emitter()
+app.set('eventEmitter', eventEmitter)
 
 // session store
 let mongoStore = new MongoDbStore({
@@ -71,6 +74,25 @@ app.set('view engine', 'ejs')
 require('./routes/web')(app)
 
 // listerning to the port
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`)
 });
+
+// Socket io
+const io = require('socket.io')(server)
+io.on('connection', (socket) => {
+    // Join - unique rooms
+    // console.log(socket.id)
+    socket.on('join', (orderId) => {
+        // console.log(orderId)
+        socket.join(orderId) //method of socket
+    })
+})
+
+eventEmitter.on('orderUpdated', (data) => {
+    io.to(`order_${data.id}`).emit('orderUpdated', data)
+})
+
+eventEmitter.on('orderPlaced', (data) => {
+    io.to('adminRoom').emit('orderPlaced', data)
+})
