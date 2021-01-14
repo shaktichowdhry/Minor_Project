@@ -311,6 +311,10 @@ body {
   color: #232323;
 }
 
+nav {
+  background: #fff;
+}
+
 nav li:last-child a {
   background: #FE5F1E;
 }
@@ -320,11 +324,25 @@ nav li:last-child a:hover {
 }
 
 nav li a {
+  position: relative;
   transition: all 0.3s ease-in-out;
 }
 
 nav li a:hover {
   color: #FE5F1E;
+}
+
+nav li a span {
+  position: absolute;
+  top: -0.01em;
+  right: 0.4em;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  width: 100%;
 }
 
 section.hero {
@@ -340,8 +358,46 @@ section.hero {
   background: #b23301;
 }
 
+.btn-primary:focus {
+  outline: none;
+}
+
+.btn-secondary {
+  background: #232323;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-secondary:hover {
+  background: #ccc;
+  color: #232323;
+}
+
+.btn-secondary:focus {
+  outline: none;
+}
+
+section.menu-section {
+  background: #F8F8F8;
+}
+
 .size {
   background: #F8F8F8;
+}
+
+.cake-card {
+  background: #fff;
+  border-radius: 10px;
+}
+
+.cake-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#card-image {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 2px;
+  width: 130px;
 }
 
 .add-to-cart {
@@ -368,6 +424,12 @@ section.cart .amount {
   color: #FE5F1E;
 }
 
+section.cart .cart-card {
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
 .noty_theme__mint {
   border-radius: 50px !important;
   padding-left: 8px !important;
@@ -384,6 +446,10 @@ section.login a {
 
 section.login a:hover {
   color: #b23301;
+}
+
+section.orders {
+  background: #F8F8F8;
 }
 
 a.link {
@@ -495,5 +561,57 @@ section.status {
   float: right;
   font-size: 14px;
   margin-top: 8px;
+}
+
+@media (max-width: 1060px) {
+  .container {
+    max-width: 90%;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .status-box ul li span:before {
+    font-size: 34px;
+  }
+}
+
+/* ----------------Footer -------------------- */
+
+footer {
+  background: #232323;
+}
+
+footer ul li a {
+  color: #F8F8F8;
+}
+
+footer ul li a:hover {
+  color: #FE5F1E;
+}
+
+footer p {
+  color: #F8F8F8;
+}
+
+footer .social ul li:nth-child(1) a:hover {
+  color: #3b5998;
+}
+
+footer .social ul li:nth-child(2) a:hover {
+  color: #ef3a25;
+}
+
+footer .social ul li:nth-child(3) a:hover {
+  color: #1DA1F2;
+}
+
+footer .social ul li:nth-child(4) a:hover {
+  color: #E1306C;
 }
 

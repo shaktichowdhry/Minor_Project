@@ -1,6 +1,6 @@
-<section class="cart py-16">
+<section class="cart py-16 min-h-screen">
     <% if(session.cart) {%>
-        <div class="order container mx-auto w-1/2">
+        <div class="order container mx-auto xl:w-1/2">
             <div class="flex items-center border-b border-gray-300  pb-4">
                 <img src="/img/cart-black.png" alt="cart-black">
                 <h1 class="font-bold ml-4 text-2xl">Order summary</h1>
@@ -8,16 +8,21 @@
             <!-- wrapper -->
             <div class="cake-list">
                 <% for(let cake of Object.values(session.cart.items) ) {%>
-                    <div class="flex items-center my-8">
-                        <img class="w-24" src="/img/<%= cake.item.image%>" alt="itemImage">
-                        <div class="flex-1 ml-4">
+                    <div class="cart-card flex items-center my-8">
+                        <img id="card-image" class="w-24" src="/img/<%= cake.item.image%>" alt="itemImage">
+                        <div class="flex-1 ml-4 justify-items-center">
                             <h1>
                                 <%= cake.item.name%>
                             </h1>
                             <span><%= cake.item.size%></span>
+                            <div>
+                                <button onclick="" class=" btn-secondary px-3 py-1 rounded-full text-white font-bold mt-6">
+                                    Remove
+                                </button>
+                            </div>
                         </div>
-                        <span class="flex-1"><%= cake.qty%> Pcs</span>
-                        <span class="font-bold text-lg">₹ <%= cake.item.price * cake.qty %></span>
+                        <span class="flex-1 pl-2"><%= cake.qty%> Pcs</span>
+                        <span class="font-bold text-lg pl-2">₹ <%= cake.item.price * cake.qty %></span>
                     </div>
                     <%}%>
             </div>
@@ -40,6 +45,10 @@
                     <%} else {%>
                         <a href="/login" class="inline-block cursor-pointer btn-primary px-6 py-2 rounded-full text-white font-bold mt-6">Login to continue</a>
                         <%}%>
+                            <p class="pt-4 font-bold text-2xl">
+                                ------ OR -------
+                            </p>
+                            <a href="/#menu" class="inline-block cursor-pointer btn-primary px-6 py-2 rounded-full text-white font-bold mt-6">Continue Shopping</a>
             </div>
         </div>
         <% } else {%>

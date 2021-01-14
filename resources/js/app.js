@@ -84,7 +84,6 @@ updateStatus(order);
 
 // Socket
 let socket = io()
-initAdmin(socket)
 
 //Join
 if (order) {
@@ -94,6 +93,7 @@ if (order) {
 let adminAreaPath = window.location.pathname
     // console.log(adminAreaPath)
 if (adminAreaPath.includes('admin')) {
+    initAdmin(socket)
     socket.emit('join', 'adminRoom')
 }
 
@@ -109,4 +109,9 @@ socket.on('orderUpdated', (data) => {
         progressBar: false,
         text: 'Order Updated'
     }).show();
+})
+
+// smooth scroll
+const scroll = new SmoothScroll(' a[href*="#"]', {
+    speed: 800
 })

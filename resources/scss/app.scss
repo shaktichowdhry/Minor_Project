@@ -12,18 +12,33 @@ body {
 }
 
 // navigation
-nav li:last-child a {
-    background: $primary;
-    &:hover {
-        background: $primary-hover;
+nav {
+    background: $pure;
+    li:last-child a {
+        background: $primary;
+        &:hover {
+            background: $primary-hover;
+        }
+    }
+    li a {
+        position: relative;
+        transition: $smooth;
+        &:hover {
+            color: $primary;
+        }
+        span {
+            position: absolute;
+            top: -0.01em;
+            right: 0.4em;
+        }
     }
 }
 
-nav li a {
-    transition: $smooth;
-    &:hover {
-        color: $primary;
-    }
+.sticky {
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    // transition:  1s ease-in;
 }
 
 // hero section
@@ -37,11 +52,46 @@ section.hero {
     &:hover {
         background: $primary-hover;
     }
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn-secondary {
+    background: $dark;
+    transition: $smooth;
+    &:hover {
+        background: $gray;
+        color: $dark;
+    }
+    &:focus {
+        outline: none;
+    }
 }
 
 // menu
+section.menu-section {
+    background: $secondary;
+}
+
 .size {
     background: $secondary;
+}
+
+.cake-card {
+    background: $pure;
+    border-radius: 10px;
+    &:hover {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+}
+
+#card-image {
+    border: 1px solid $gray;
+    border-radius: 4px;
+    padding: 2px;
+    width: 130px;
+    // width: 150px;
 }
 
 .add-to-cart {
@@ -64,6 +114,11 @@ section.cart {
     .amount {
         color: $primary;
     }
+    .cart-card {
+        background: $pure;
+        padding: 20px;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    }
 }
 
 .noty_theme__mint {
@@ -84,6 +139,10 @@ section.login {
 }
 
 // orders
+section.orders {
+    background: $secondary;
+}
+
 a.link {
     color: $primary;
 }
@@ -200,4 +259,50 @@ section.status {
     float: right;
     font-size: 14px;
     margin-top: 8px;
+}
+
+// responsive
+@media(max-width:1060px) {
+    .container {
+        max-width: 90%;
+    }
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+@media(max-width: 768px) {
+    .status-box ul li span:before {
+        font-size: 34px;
+    }
+}
+
+
+/* ----------------Footer -------------------- */
+
+footer {
+    background: $dark;
+    ul li a {
+        color: $secondary;
+        &:hover {
+            color: $primary;
+        }
+    }
+    p {
+        color: $secondary;
+    }
+    .social ul li:nth-child(1) a:hover {
+        color: $facebook;
+    }
+    .social ul li:nth-child(2) a:hover {
+        color: $google;
+    }
+    .social ul li:nth-child(3) a:hover {
+        color: $twitter;
+    }
+    .social ul li:nth-child(4) a:hover {
+        color: $instagram;
+    }
 }
