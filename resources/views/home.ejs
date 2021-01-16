@@ -2,9 +2,9 @@
 <section class="hero py-16">
     <div class="container mx-auto flex items-center justify-between">
         <div class="w-1/2">
-            <h6 class="text-lg"><em>Have craving for a cake?</em></h6>
-            <h1 class="text-3xl md:text-6xl font-bold">Don't wait !</h1>
-            <a href="#menu" class="btn-primary px-6 py-3 rounded-full text-white font-bold mt-4">Order Now</a>
+            <h6 class="text-sm md:text-lg"><em>Have craving for a cake?</em></h6>
+            <h1 class="text-2xl md:text-6xl font-bold">Don't wait !</h1>
+            <a href="#menu" class="btn-primary px-3 md:px-6 py-1 md:py-3 rounded-full text-white font-bold mt-10">Order Now</a>
             <!-- <button onclick="window.location.href='#menu'" class="btn-primary px-6 py-2 rounded-full text-white font-bold mt-4">
                 Order Now
             </button> -->
@@ -15,14 +15,43 @@
     </div>
 </section>
 <!-- About -->
-<section class="about py-8 h-screen">
+<section class="about py-8 min-h-screen" id="about">
+    <div class="text-center pt-12 mx-auto">
+        <h2 class="text-4xl mb-8  uppercase grid">Get to know ous<span class="justify-self-center underline-h"></span></h2>
+        <p class="w-4/5 md:w-2/5 text-center mx-auto text-lg">
+            Hello 👋 , we're Sugarfield, your new premium bakery shop that provides you with an outstanding variety of custom cakes. we invite your to discover the quality of our bakery's delcious sweet cakes made every day specially for you.
+        </p>
+    </div>
 
+    <div class="grid grid-cols-1 md:grid-cols-2 mx-auto">
+        <div class="flex">
+            <div class="md:w-1/3"></div>
+            <img class="w-3/4 md:w-2/3 " src="/img/chef.png" alt="chefImage">
+        </div>
+        <div class="pl-6">
+            <h3 class=" pt-10 text-2xl">Meet our chef <span class="underline"></span></h3>
+            <h4 class="text-xl pt-4 font-bold">Richa Patel</h4>
+            <p class="pt-4 w-3/4 text-lg"> Self-motivated, Self taught baker with outstanding skills as both Chef and Manager. Seeking to bring strong supervisory food prep and organizational skills to the table with a respected organization that values hard work commitment and vision.
+            </p>
+            <ul class="pt-4 flex text-3xl">
+                <li class="pl-6"><a href="https://www.facebook.com" target="_blank"><i class="lab la-facebook-f"></i></a></li>
+                <li class="pl-4"><a href="https://www.instagram.com/sugarfield_byricha/" target="_blank"><i class="lab la-instagram"></i></a></li>
+                <li class="pl-4"><a href="tel:919285424698"><i class="las la-phone-volume"></i></a></li>
+                <li class="pl-4"><a href="mailto:sugerfield.richa@gmail.com" target="_blank"><i class="lab la-google-plus-g"></i></a></li>
+                <li class="pl-4">
+                    <a target="_blank" href="https://wa.me/919285424698?text=Hi"><i class="lab la-whatsapp"></i></a>
+                </li>
+            </ul>
+            <p class="pt-4 text-lg">Email: &nbsp;<a class="italic" href="mailto:sugerfield.richa@gmail.com"> sugerfield.richa@gmail.com</a></p>
+            <p class="text-lg">Phone: &nbsp;<a class="italic" href="tel:9285424698"> 9285424698</a></p>
+        </div>
+    </div>
 </section>
 <!-- Menu -->
 <section class="menu-section py-8">
-    <div class="menu container mx-auto" id="menu">
-        <h1 class="text-2xl font-bold mb-8">All Cakes</h1>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 col-gap-12 row-gap-16">
+    <div class="menu pt-20 container mx-auto" id="menu">
+        <h1 class="text-4xl mb-8 text-center grid uppercase">Cake Menu<span class="justify-self-center underline"></span></h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 col-gap-12 row-gap-16 pt-4">
             <% cakes.forEach(function (cake) { %>
                 <div class="w-full md:w-64 cake-card">
                     <img class="h-40 mb-4 mt-1 mx-auto" src="/img/<%=cake.image%>" alt="menuItem">
@@ -44,5 +73,58 @@
         </div>
     </div>
 </section>
+<!-- contact us -->
+<section class="contact py-8 min-h-screen" id="contact">
+    <div class="text-center pt-12 mx-auto">
+        <h2 class="text-4xl mb-8  uppercase grid">WE'RE HAPPY TO HEAR FROM YOU<span class="justify-self-center underline-h"></span></h2>
+    </div>
 
-<!-- <script src="/js/app.js"></script> -->
+    <div class="grid grid-cols-1 md:grid-cols-2 mx-auto container pt-2">
+        <div class="md:border-r px-4 flex">
+            <div class="md:w-1/4"></div>
+            <div class="md:w-3/4">
+                <h3 class="pt-10 text-2xl">Get in Touch <span class="underline"></span></h3>
+                <p class="pt-10 text-lg">Planning a party? Need help with something? we're just around the corner. Send your questions our way.</p>
+                <p class="pt-6 text-lg">We want each customer's experience to be an enjoyable one, and we focus on all aspects involved: great food, gracious service, warm atmosphere, head aromas and irresistible displays. we can't wait to see you!</p>
+            </div>
+        </div>
+
+        <div class="px-4 py-6">
+            <form method="POST" action="/" class="contact-form">
+                <div class="flex pt-4">
+                    <label class="w-1/4" for="name">Name</label>
+                    <input class="w-3/4" type="text" name="name" id="name" placeholder="Your name" required>
+                </div>
+                <div class="flex pt-4">
+                    <label class="w-1/4" for="email">Email</label>
+                    <input class="w-3/4" type="email" name="email" id="email" placeholder="Your email" required>
+                </div>
+                <div class="flex pt-4">
+                    <label class="w-1/4" for="find-us">How did you find us?</label>
+                    <select class="w-3/4" name="find-us" id="find-us">
+                                    <option value="friends" selected>Friends</option>
+                                    <option value="search">Search engine</option>
+                                    <option value="ad">Advertisement</option>
+                                    <option value="other">Other</option>
+                        </select>
+                </div>
+                <div class="flex pt-4">
+                    <label class="md:w-1/4">Newsletter?</label>
+                    <input class="md:w-1/1" type="checkbox" name="news" id="news" checked> Yes, please
+                </div>
+                <div class="flex pt-4">
+                    <label class="w-1/4">Drop us a line</label>
+                    <textarea class="w-3/4" name="message" placeholder="Your message"></textarea>
+                </div>
+                <div class="flex">
+                    <div class="w-1/4"></div>
+                    <!-- <a class="btn-primary px-2 md:px-4 py-1 md:py-2 rounded-full text-white font-bold mt-6">Send it!</a> -->
+                    <button type="submit" class="btn-primary px-2 md:px-4 py-1 md:py-2 rounded-full text-white font-bold mt-6">
+                        Send it!
+                    </button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</section>

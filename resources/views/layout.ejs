@@ -18,7 +18,7 @@
     <nav>
         <div class="container mx-auto flex items-center justify-between py-4">
             <div>
-                <a href="/"> <img class="w-max h-12" src="/img/logo.svg" alt="logo"></a>
+                <a href="/"> <img id="logo" class="w-max h-12" src="/img/logo.svg" alt="logo"></a>
             </div>
             <div>
                 <ul class="flex items-center">
@@ -52,8 +52,9 @@
                 <div class="pb-2">
                     <ul class="flex items-center">
                         <li class="ml-2 md:ml-6 text-lg"><a href="/">Home</a></li>
-                        <li class="ml-2 md:ml-6 text-lg"><a href="#">About</a></li>
+                        <li class="ml-2 md:ml-6 text-lg"><a href="/#about">About</a></li>
                         <li class="ml-2 md:ml-6 text-lg"><a href="/#menu">Menu</a></li>
+                        <li class="ml-2 md:ml-6 text-lg"><a href="/#contact">Contact</a></li>
                         <% if(!user) {%>
                             <li class="ml-2 md:ml-6 text-lg"><a href="/login">Login</a></li>
                             <%}%>

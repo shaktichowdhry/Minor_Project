@@ -14,8 +14,9 @@ const Emitter = require('events')
 
 
 // Database connection - make a snipped
-const url = 'mongodb://localhost/sugarfield';
-mongoose.connect(url, { useNewUrlParser: true, useCreateIndex: true, useUnifieldTopology: true, useFindAndModify: true });
+// const url = 'mongodb://localhost/sugarfield';
+// mongoose.connect(url, { useNewUrlParser: true, useCreateIndex: true, useUnifieldTopology: true, useFindAndModify: true });
+mongoose.connect(process.env.MONGO_CONNECTION_URL, { useNewUrlParser: true, useCreateIndex: true, useUnifieldTopology: true, useFindAndModify: true });
 const connection = mongoose.connection;
 connection.once('open', () => {
     console.log('Database connected...');
@@ -72,6 +73,9 @@ app.set('view engine', 'ejs')
 
 // importing local modules
 require('./routes/web')(app)
+app.use((req, res) => {
+    res.status(404).render('errors/404')
+})
 
 // listerning to the port
 const server = app.listen(PORT, () => {
